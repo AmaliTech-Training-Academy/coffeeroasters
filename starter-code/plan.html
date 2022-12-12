@@ -66,27 +66,33 @@
 
 <section class="second-section">
   <div class="choices">
-    <div class="numbers">
-      <div class="first-choice">01</div>
-      <div class="second-choice">02</div>
-      <div class="third-choice">03</div>
-      <div class="fourth-choice">04</div>
-      <div class="fifth-choice">05</div>
+      <div class="first-choice">
+        <div class="num">01</div>
+          <a href="#">Preferences</a>
+        </div>
+      <div class="second-choice">
+        <div class="num">02</div>
+          <a href="#">Bean type</a>
+      </div>
+      <div class="third-choice">
+        <div class="num">03</div>
+          <a href="#">Quantity</a>
+      </div>
+      <div class="fourth-choice">
+        <div class="num">04</div>
+          <a href="#">Grind option</a>
     </div>
-    <ul>
-      <li><a href="#">Preferences</a></li>
-      <li><a href="#">Bean type</a></li>
-      <li><a href="#">Quantity</a></li>
-      <li><a href="#">Grind option</a></li>
-      <li><a href="#">Deliveries</a></li>
-    </ul>
-  </div>
+      <div class="fifth-choice">
+        <div class="num">05</div>
+        <a href="#">Deliveries</a>
+      </div>
+      </div>
 
   <div class="choice-cards">
 
-    <div class="preference-card">
-      <h1>How do you drink your coffee?</h1>
-        <div class="preferences">
+    <div class="method-card-dropdowwn" data-dropwdown>
+      <h1 class="card" data-dropdown-button>How do you drink your coffee?</h1>
+        <div class="preferences" id="method">
           <div class="pref-one">
       <h3> Capsule</h3>
       <p>Compatible with Nespresso systems and similar brewers</p>
@@ -98,15 +104,15 @@
       </div>
 
       <div class="pref-three">
-           <h3>Espresso</h3>
-      <p>Dense and finely ground beans for an intense, flavorful experience</p>
+        <h3>Espresso</h3>
+          <p>Dense and finely ground beans for an intense, flavorful experience</p>
       </div>
     </div>
        </div>
 
-    <div class="beans-card">
-       <h1>What type of coffee?</h1>
-        <div class="bean-type">
+    <div class="beans-card" data-dropwdown>
+       <h1 class="card" data-dropdown-button>What type of coffee?</h1>
+        <div class="preferences" id="beans">
       <div class="pref-one">
         <h3>Single origin</h3>
       <p>Distinct, high quality coffee from a specific family-owned farm
@@ -127,9 +133,9 @@
     </div>
     </div>
   
-<div class="quantity-card">
-  <h1> How much would you like?</h1>
-  <div class="amount">
+<div class="quantity-card" data-dropwdown>
+  <h1 class="card"  data-dropdown-button> How much would you like?</h1>
+  <div class="preferences" id="quantity">
     <div class="pref-one">
       <h3> 250g</h3>
       <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
@@ -146,9 +152,9 @@
 </div>
     </div>
 
-    <div class="grind-card">
-       <h1>Want us to grind them?</h1> 
-      <div class="grind-method">
+    <div class="grind-card" data-dropwdown>
+       <h1 class="card"  data-dropdown-button>Want us to grind them?</h1> 
+      <div class="preferences" id="grind">
        <div class="pref-one">
         <h3>Wholebean</h3>
       <p>Best choice if you cherish the full sensory experience</p>
@@ -164,10 +170,10 @@
     </div>
     </div>
 
-    <div class="delivery-card">
-       <h1>How often should we deliver?</h1>
-      <div class="delivery-type">
-       <div class="pref-one">
+    <div class="delivery-card" data-dropwdown>
+      <h1 class="card"  data-dropdown-button>How often should we deliver?</h1>
+        <div class="preferences" id="delivery">
+          <div class="pref-one">
         <h3>Every week</h3>
       <p>$14.00 per shipment. Includes free first-class shipping.</p>
     </div>
@@ -186,8 +192,8 @@
     <div class="order-sum">
       <h4>Order Summary</h4>
 
-      <h2>“I drink coffee <span>_____</span>, with a <span> _____</span> type of bean. <span>_____</span>ground ala <span> _____</span>, 
-  sent to me <span>_____</span>.”</h2>
+      <h2>“I drink coffee <span class="selected-method">_____</span>, with a <span class="selected-bean"> _____</span> type of bean. <span class="selected-quantity">_____</span>ground ala <span class="selected-grind"> _____</span>, 
+  sent to me <span class="selected-delivery">_____</span>.”</h2>
     </div>
 
     <button class="order-complete">Create my plan!</button> 
@@ -209,21 +215,25 @@
 </section>
  
 <footer>
-<div class="footer-items">
-  <div class="footer-image"><img src="./assets/shared/desktop/logo.svg" id="footer-logo" alt="">  
-</div>
-<div class="footer-links">
-<a href="./index.html">Home</a>
-<a href="./about.html">About us</a>
-<a href="./plan.html">Create your plan</a> 
-</div>
-<div class="social-media">
-  <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
-  <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
-  <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+  <div class="footer-items">
+    <div class="footer-image"><img src="./assets/shared/desktop/logo.svg" id="footer-logo" alt="">  
   </div>
-</div>
-</footer>
+  <div class="footer-links">
+  <a href="./index.html">Home</a>
+  <a href="./about.html">About us</a>
+  <a href="./plan.html">Create your plan</a> 
+  </div>
+  <div class="social-media">
+    <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
+    <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
+    <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+    </div>
+  </div>
+  </footer>
+
+<script src="script.js" defer></script>
+
+
 </body>
 
 </html>
