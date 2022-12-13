@@ -90,8 +90,11 @@
 
   <div class="choice-cards">
 
-    <div class="method-card-dropdowwn" data-dropwdown>
-      <h1 class="card" data-dropdown-button>How do you drink your coffee?</h1>
+    <div class="method-card" data-dropwdown>
+      <div class="card-header">
+        <h1 class="card" data-dropdown-button>How do you drink your coffee?</h1>
+      <div class="card-header-image"></div>
+    </div>
         <div class="preferences" id="method">
           <div class="pref-one">
       <h3> Capsule</h3>
@@ -111,7 +114,10 @@
        </div>
 
     <div class="beans-card" data-dropwdown>
-       <h1 class="card" data-dropdown-button>What type of coffee?</h1>
+      <div class="card-header">\
+        <h1 class="card" data-dropdown-button>What type of coffee?</h1>
+        <div class="card-header-image"></div>
+      </div>
         <div class="preferences" id="beans">
       <div class="pref-one">
         <h3>Single origin</h3>
@@ -134,7 +140,10 @@
     </div>
   
 <div class="quantity-card" data-dropwdown>
-  <h1 class="card"  data-dropdown-button> How much would you like?</h1>
+  <div class="card-header">
+    <h1 class="card"  data-dropdown-button> How much would you like?</h1>
+  <div class="card-header-image"></div>
+  </div>
   <div class="preferences" id="quantity">
     <div class="pref-one">
       <h3> 250g</h3>
@@ -153,7 +162,10 @@
     </div>
 
     <div class="grind-card" data-dropwdown>
-       <h1 class="card"  data-dropdown-button>Want us to grind them?</h1> 
+      <div class="card-header">
+        <h1 class="card"  data-dropdown-button>Want us to grind them?</h1> 
+        <div class="card-header-image"></div>
+      </div>
       <div class="preferences" id="grind">
        <div class="pref-one">
         <h3>Wholebean</h3>
@@ -171,7 +183,10 @@
     </div>
 
     <div class="delivery-card" data-dropwdown>
-      <h1 class="card"  data-dropdown-button>How often should we deliver?</h1>
+      <div class="card-header">
+        <h1 class="card"  data-dropdown-button>How often should we deliver?</h1>
+        <div class="card-header-image"></div>
+      </div>
         <div class="preferences" id="delivery">
           <div class="pref-one">
         <h3>Every week</h3>
@@ -190,16 +205,19 @@
     
 
     <div class="order-sum">
-      <h4>Order Summary</h4>
-
-      <h2>“I drink coffee <span class="selected-method">_____</span>, with a <span class="selected-bean"> _____</span> type of bean. <span class="selected-quantity">_____</span>ground ala <span class="selected-grind"> _____</span>, 
+      <div class="order-sum-text">
+        <h4>Order Summary</h4>
+<h2>“I drink my coffee as <span class="selected-method">_____</span>, with a <span class="selected-bean"> _____</span> type of bean. <span class="selected-quantity">_____</span>ground ala <span class="selected-grind"> _____</span>, 
   sent to me <span class="selected-delivery">_____</span>.”</h2>
+      </div>
+      
+  
+  <button class="order-complete">Create my plan!</button> 
     </div>
 
-    <button class="order-complete">Create my plan!</button> 
 
   <!-- Modal -->
-  Order Summary
+  <!-- Order Summary
 
   “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
   sent to me _____.”
@@ -209,7 +227,7 @@
 
   $_____/month
 
-  Checkout
+  Checkout -->
   <!-- End modal -->
   </div>
 </section>
