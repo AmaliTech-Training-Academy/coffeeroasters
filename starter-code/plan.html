@@ -119,7 +119,7 @@
         <div class="card-header-image"></div>
       </div>
         <div class="preferences" id="beans">
-      <div class="pref-one">
+      <div class="pref-one" onclick="myFunction()">
         <h3>Single origin</h3>
       <p>Distinct, high quality coffee from a specific family-owned farm
       </p>
@@ -188,7 +188,7 @@
         <div class="card-header-image"></div>
       </div>
         <div class="preferences" id="delivery">
-          <div class="pref-one">
+          <div class="pref-one" id="one" onclick="myFunction()">
         <h3>Every week</h3>
       <p>$14.00 per shipment. Includes free first-class shipping.</p>
     </div>
@@ -207,15 +207,15 @@
     <div class="order-sum">
       <div class="order-sum-text">
         <h4>Order Summary</h4>
-<h2>“I drink my coffee as <span class="selected-method">_____</span>, with a <span class="selected-bean"> _____</span> type of bean. <span class="selected-quantity">_____</span>ground ala <span class="selected-grind"> _____</span>, 
-  sent to me <span class="selected-delivery">_____</span>.”</h2>
+<h2>“I drink my coffee as <span id="selected-method">_____</span>, with a <span id="selected-bean"> _____</span> type of bean. <span id="selected-quantity">_____</span>ground ala <span id="selected-grind"> _____</span>, 
+  sent to me <span id="selected-delivery">_____</span>.”</h2>
       </div>
       
   
   <button class="order-complete">Create my plan!</button> 
     </div>
 
-
+<!-- <p id="demo">Oh Happy Day!</p> -->
   <!-- Modal -->
   <!-- Order Summary
 
@@ -231,11 +231,11 @@
   <!-- End modal -->
   </div>
 </section>
- 
+
 <footer>
   <div class="footer-items">
     <div class="footer-image"><img src="./assets/shared/desktop/logo.svg" id="footer-logo" alt="">  
-  </div>
+    </div>
   <div class="footer-links">
   <a href="./index.html">Home</a>
   <a href="./about.html">About us</a>
@@ -248,10 +248,30 @@
     </div>
   </div>
   </footer>
+  <!-- <div>
+    <img id="myImage" src="./assets/plan/desktop/icon-arrow.svg" alt="" width="100" height="100">
+    <button onclick="light(0)">jydtydikyfuofv</button>
+    <button onclick="light(1)">jydtydikyfuofv</button>
+  </div> -->
 
-<script src="script.js" defer></script>
-
+<!-- <script>
+// function light(sw){
+// var pic;
+// if(sw==0){
+//   pic = "./assets/shared/mobile/icon-hamburger.svg"
+// } else{
+//   pic = "./assets/plan/desktop/icon-arrow.svg"
+// }
+// document.getElementById("myImage").src = pic;
+// }   
+</script> -->
+<script>
+  hamburger = document.querySelector(".checkbtn");
+  hamburger.onclick = function() {
+    navBar = document.querySelector(".nav-bar")
+    navBar.classList.toggle("active")
+  } 
+</script>
 
 </body>
-
 </html>
