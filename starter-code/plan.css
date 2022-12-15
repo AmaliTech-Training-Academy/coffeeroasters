@@ -478,7 +478,7 @@ footer .footer-image #footer-logo{
     }
 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:850px){
     /* header {
         border: 1px solid black;
         display: flex;
@@ -880,7 +880,7 @@ footer .footer-image #footer-logo{
     
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:440px){
     header{
         /* border: 1px solid black; */
         margin: 2rem 1.5rem;

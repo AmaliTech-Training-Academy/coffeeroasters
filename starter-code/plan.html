@@ -161,14 +161,14 @@
 </div>
     </div>
 
-    <div class="grind-card" data-dropwdown>
+    <div class="grind-card">
       <div class="card-header">
         <h1 class="card"  data-dropdown-button>Want us to grind them?</h1> 
         <div class="card-header-image"></div>
       </div>
       <div class="preferences" id="grind">
        <div class="pref-one">
-        <h3>Wholebean</h3>
+        <h3 onclick="changeText(this)">Wholebean</h3>
       <p>Best choice if you cherish the full sensory experience</p>
        </div>
       <div class="pref-two">
@@ -188,7 +188,7 @@
         <div class="card-header-image"></div>
       </div>
         <div class="preferences" id="delivery">
-          <div class="pref-one" id="one" onclick="myFunction()">
+          <div class="pref-one" id="one">
         <h3>Every week</h3>
       <p>$14.00 per shipment. Includes free first-class shipping.</p>
     </div>
@@ -214,6 +214,9 @@
   
   <button class="order-complete">Create my plan!</button> 
     </div>
+
+    <div ></div>
+
 
 <!-- <p id="demo">Oh Happy Day!</p> -->
   <!-- Modal -->
@@ -248,30 +251,8 @@
     </div>
   </div>
   </footer>
-  <!-- <div>
-    <img id="myImage" src="./assets/plan/desktop/icon-arrow.svg" alt="" width="100" height="100">
-    <button onclick="light(0)">jydtydikyfuofv</button>
-    <button onclick="light(1)">jydtydikyfuofv</button>
-  </div> -->
 
-<!-- <script>
-// function light(sw){
-// var pic;
-// if(sw==0){
-//   pic = "./assets/shared/mobile/icon-hamburger.svg"
-// } else{
-//   pic = "./assets/plan/desktop/icon-arrow.svg"
-// }
-// document.getElementById("myImage").src = pic;
-// }   
-</script> -->
-<script>
-  hamburger = document.querySelector(".checkbtn");
-  hamburger.onclick = function() {
-    navBar = document.querySelector(".nav-bar")
-    navBar.classList.toggle("active")
-  } 
-</script>
-
+  <script>
+  </script>
 </body>
 </html>
