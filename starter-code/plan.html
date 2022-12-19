@@ -1,0 +1,306 @@
+.<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="plan.css">
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="./assets/shared/mobile/logo.svg" alt=""></div>
+    <div class="checkbtn"><img src="./assets/shared/mobile/icon-hamburger.svg" alt=""></div>
+    <nav class="nav-bar">
+      <ul>
+        <li>
+          <a href="./index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="./about.html"> About us</a>
+        </li>
+        <li>
+          <a href="./plan.html">Create your plan</a>
+        </li>
+        </ul>
+      </nav>
+  </header>
+
+<main class="hero">
+  <div class="hero-txt">
+<h1>Create plan</h1> 
+<p>Build a subscription plan that best fits your needs. We offer an assortment of the best 
+  artisan coffees from around the globe delivered fresh to your door.</p>  
+  </div> 
+</main>
+
+<section class="first-section">
+  <div class="line">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <div class="steps">
+      <div class="step-one">
+        <h1>01</h1>
+          <h2>Pick your coffee</h2>
+            <p>Select from our evolving range of artisan coffees. Our beans are ethically
+  sourced and we pay fair prices for them. There's new coffees in all profiles
+  every month for you to try out.</p>
+      </div>
+      <div class="step-two">
+        <h1>02</h1>
+          <h2>Choose the frequency</h2>
+            <p>Customize your order frequency, quantity, even your roast style and grind type.
+  Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+      </div>
+      <div class="step-three">
+        <h1>03</h1>
+          <h2>Receive and enjoy!</h2>
+            <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+  world-class coffees curated to provide a distinct tasting experience.</p>
+      </div>
+  </div>
+</section>
+
+<section class="second-section">
+  <div class="choices">
+      <div class="first-choice">
+        <div class="num">01</div>
+          <a href="#">Preferences</a>
+        </div>
+      <div class="second-choice">
+        <div class="num">02</div>
+          <a href="#">Bean type</a>
+      </div>
+      <div class="third-choice">
+        <div class="num">03</div>
+          <a href="#">Quantity</a>
+      </div>
+      <div class="fourth-choice">
+        <div class="num">04</div>
+          <a href="#">Grind option</a>
+    </div>
+      <div class="fifth-choice">
+        <div class="num">05</div>
+        <a href="#">Deliveries</a>
+      </div>
+      </div>
+
+  <div class="choice-cards">
+
+    <div class="method-card" data-dropwdown>
+      <div class="card-header">
+        <h1 class="card" data-dropdown-button>How do you drink your coffee?</h1>
+      <div class="card-header-image"></div>
+    </div>
+        <div class="preferences" id="method">
+          <div class="pref-one" id="pref-one">
+      <h3> Capsule</h3>
+      <p>Compatible with Nespresso systems and similar brewers</p>
+      </div>
+
+      <div class="pref-two" id="pref-two">
+      <h3>Filter</h3>
+      <p> For pour over or drip methods like Aeropress, Chemex, and V60</p>
+      </div>
+
+      <div class="pref-three" id="pref-three">
+        <h3>Espresso</h3>
+          <p>Dense and finely ground beans for an intense, flavorful experience</p>
+      </div>
+    </div>
+       </div>
+
+    <div class="beans-card" data-dropwdown>
+      <div class="card-header">
+        <h1 class="card" data-dropdown-button>What type of coffee?</h1>
+        <div class="card-header-image"></div>
+      </div>
+        <div class="preferences" id="beans">
+      <div class="pref-one" id="pref-one">
+        <h3>Single origin</h3>
+      <p>Distinct, high quality coffee from a specific family-owned farm
+      </p>
+      </div>
+
+      <div class="pref-two" id="pref-two">
+        <h3>Decaf</h3>
+      <p>Just like regular coffee, except the caffeine has been removed
+      </p>
+    </div>
+
+      <div class="pref-three" id="pref-three">
+        <h3>Blended</h3>
+      <p>Combination of two or three dark roasted beans of organic coffees
+      </p>
+      </div>
+    </div>
+    </div>
+  
+<div class="quantity-card" data-dropwdown>
+  <div class="card-header">
+    <h1 class="card"  data-dropdown-button> How much would you like?</h1>
+  <div class="card-header-image"></div>
+  </div>
+  <div class="preferences" id="quantity">
+    <div class="pref-one" id="pref-one">
+      <h3> 250g</h3>
+      <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+    </div>
+
+      <div class="pref-two" id="pref-two">
+        <h3>500g</h3>
+      <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+      </div>
+      <div class="pref-three" id="pref-three">
+        <h3>1000g</h3>
+      <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+      </div>
+</div>
+    </div>
+
+    <div class="grind-card">
+      <div class="card-header">
+        <h1 class="card"  data-dropdown-button>Want us to grind them?</h1> 
+        <div class="card-header-image"></div>
+      </div>
+      <div class="preferences" id="grind">
+       <div class="pref-one" id="pref-one">
+        <h3>Wholebean</h3>
+      <p>Best choice if you cherish the full sensory experience</p>
+       </div>
+      <div class="pref-two" id="pref-two">
+        <h3>Filter</h3>
+      <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+      </div>
+      <div class="pref-three" id="pref-three">
+        <h3>Cafetiére</h3>
+      <p>Course ground beans specially suited for french press coffee</p>
+    </div>
+    </div>
+    </div>
+
+    <div class="delivery-card" data-dropwdown>
+      <div class="card-header">
+        <h1 class="card"  data-dropdown-button>How often should we deliver?</h1>
+        <div class="card-header-image"></div>
+      </div>
+        <div class="preferences" id="delivery">
+          <div class="pref-one" id="pref-one">
+        <h3>Every week</h3>
+      <p>$14.00 per shipment. Includes free first-class shipping.</p>
+    </div>
+      <div class="pref-two" id="pref-two">
+        <h3>Every 2 weeks</h3>
+      <p>$17.25 per shipment. Includes free priority shipping.</p>
+    </div>
+      <div class="pref-three" id="pref-three">
+        <h3>Every month</h3>
+      <p>$22.50 per shipment. Includes free priority shipping.</p>
+    </div>
+    </div>
+    </div>
+
+    <div class="order-sum">
+      <div class="order-sum-text">
+        <h4>Order Summary</h4>
+<h2>“I drink my coffee as <span id="selected-method">_____</span>, with a <span id="selected-bean"> _____</span> type of bean. <span id="selected-quantity">_____</span>ground ala <span id="selected-grind"> _____</span>, 
+  sent to me <span id="selected-delivery">_____</span>.”</h2>
+      </div>
+  <button class="order-complete">Create my plan!</button> 
+    </div>
+  </div>
+</section>
+
+<div class="modal">
+  <div class="modal-content">
+    <h1>Order Summary</h1>
+    <div class="modal-text">
+      <h1>“I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+       sent to me _____.”
+     </h1>
+      <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
+       is off. Subscription discount codes can also be redeemed at the checkout.
+     </p>
+     <div class="total-amount"><h1>$_____/month</h1><button>Checkout</button></div>
+     
+    </div>
+    
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-items">
+    <div class="footer-image"><img src="./assets/shared/desktop/logo.svg" id="footer-logo" alt="">  
+    </div>
+  <div class="footer-links">
+  <a href="./index.html">Home</a>
+  <a href="./about.html">About us</a>
+  <a href="./plan.html">Create your plan</a> 
+  </div>
+  <div class="social-media">
+    <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
+    <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
+    <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+    </div>
+  </div>
+  </footer>
+
+  <script>
+  const hamburger = document.querySelector(".checkbtn");
+  hamburger.onclick = function(){
+    const navBar = document.querySelector(".nav-bar");
+    navBar.classList.toggle("active")
+  }
+  
+  const method = document.querySelector(".method-card");
+    const methodHeader = method.querySelector(".card-header");
+    methodHeader.onclick = function(){
+      card = method.querySelector(".preferences");
+      card.classList.toggle("active");
+      imageRotate = method.querySelector(".card-header-image");
+      imageRotate.classList.toggle("active")
+    }
+
+    const beans = document.querySelector(".beans-card");
+    const beansHeader = beans.querySelector(".card-header");
+    beansHeader.onclick = function(){
+      card = beans.querySelector(".preferences");
+      card.classList.toggle("active");
+      imageRotate = beans.querySelector(".card-header-image");
+      imageRotate.classList.toggle("active")
+    }
+
+    const quantity = document.querySelector(".quantity-card");
+    const quantityHeader = quantity.querySelector(".card-header");
+    quantityHeader.onclick = function(){
+      card = quantity.querySelector(".preferences");
+      card.classList.toggle("active");
+      imageRotate = quantity.querySelector(".card-header-image");
+      imageRotate.classList.toggle("active")
+    }
+
+    const grind = document.querySelector(".grind-card");
+    const grindHeader = grind.querySelector(".card-header");
+    grindHeader.onclick = function(){
+      card = grind.querySelector(".preferences");
+      card.classList.toggle("active");
+      imageRotate = grind.querySelector(".card-header-image");
+      imageRotate.classList.toggle("active")
+    }
+
+    const delivery = document.querySelector(".delivery-card");
+    const deliveryHeader = delivery.querySelector(".card-header");
+    deliveryHeader.onclick = function(){
+      card = delivery.querySelector(".preferences");
+      card.classList.toggle("active");
+      imageRotate = delivery.querySelector(".card-header-image");
+      imageRotate.classList.toggle("active")
+    }
+    
+  </script>
+</body>
+</html>
