@@ -19,13 +19,23 @@
   <body>
     <main>
       <!-- NAVBAR LINKS -->
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Create Your Plan</a></li>
+     <header>
+    <div class="logo"><img src="./assets/shared/mobile/logo.svg" alt=""></div>
+    <div class="checkbtn"><img src="./assets/shared/mobile/icon-hamburger.svg" alt=""></div>
+    <nav class="nav-bar">
+      <ul>
+        <li>
+          <a href="./index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="./about.html"> About us</a>
+        </li>
+        <li>
+          <a href="./plan.html">Create your plan</a>
+        </li>
         </ul>
       </nav>
+  </header>
 
       <!-- GREAT COFFEE MADE SIMPLE DESIGN -->
       <section class="hero">
@@ -46,46 +56,50 @@
        <div class="our-collection">
         <h1 class="our-collection-h1">our collection</h1>
       </div> 
-        <div class="cards-container">
           <div class="cards">
 
-            <img src="./assets/home/desktop/image-danche.png" alt="" />
-            <img src="./assets/home/desktop/image-gran-espresso.png" alt="" />
-            <img src="./assets/home/desktop/image-piccollo.png" alt="" />
-            <img src="./assets/home/desktop/image-planalto.png" alt="" />
-          </div>
-        
-
-        <div class="text-container">
-         <div>
+            <div class="card-one">
+              <img src="./assets/home/desktop/image-gran-espresso.png" alt="" />
+               <div class="text-container">
           <h3>Gran Espresso</h3>
           <p>
             Light and flavorful blend with cocoa and black pepper for an intense
             experience
           </p>
-         </div> 
-         <div>
+        </div>
+            </div>
+
+            <div class="card-two">
+              <img src="./assets/home/desktop/image-planalto.png" alt="" />
+               <div class="text-container">
           <h3>Planalto</h3>
           <p>
-            Brazilian dark roast with rich and velvety body, and hints of fruits <br>
+            Brazilian dark roast with rich and velvety body, and hints of fruits 
             and nuts
           </p>
-         </div>
-         <div>
+        </div>
+      </div>
+            <div class="card-three">
+              <img src="./assets/home/desktop/image-piccollo.png" alt="" />
+               <div class="text-container">
           <h3>Piccollo</h3>
           <p>
             Mild and smooth blend featuring <br> notes of toasted almond and dried cherry
           </p>
-         </div>
-          <div>
+            </div>
+            </div>
+
+            <div class="card-four">
+              <img src="./assets/home/desktop/image-danche.png" alt="" />
+           <div class="text-container">
             <h3>Danche</h3>
             <p>
-              Ethiopian hand-harvested blend <br> densely packed with vibrant <br> fruit
+              Ethiopian hand-harvested blend <br> densely packed with vibrant fruit
               notes
             </p>
+           </div>     
           </div>
           </div>
-        </div>
       </section>
 
       <!-- WHY CHOOSE US DESIGN -->
@@ -189,7 +203,31 @@
     </main>
 
     <!-- FOOTER -->
-    <footer></footer>
+  <footer>
+<div class="footer-items">
+  <div class="footer-image"><img src="./assets/shared/desktop/logo.svg" id="footer-logo" alt="">  
+</div>
+<div class="footer-links">
+<a href="./index.html">Home</a>
+<a href="./about.html">About us</a>
+<a href="./plan.html">Create your plan</a> 
+</div>
+<div class="social-media">
+  <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
+  <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
+  <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+  </div>
+</div>
+</footer>
+
+
+<script>
+  hamburger = document.querySelector(".checkbtn");
+  hamburger.onclick = function() {
+    navBar = document.querySelector(".nav-bar")
+    navBar.classList.toggle("active")
+  } 
+</script>
   </body>
 </html>
 

@@ -1,27 +1,96 @@
 @media (max-width: 440px) {
   main {
-    width: 90%;
+    width: 88%;
     margin: auto;
+    /* border: 1px solid black; */
   }
+
+     header {
+       /* border: 1px solid black; */
+       width: 100%;
+       margin: 2rem auto 2.5rem auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+     }
+  
+     .logo img {
+       width: 70%;
+     }
+  
+     .nav-bar {
+       position: absolute;
+       top: 5.6rem;
+       left: 0;
+       right: 0;
+       width: 100vw;
+       height: 0;
+       background: linear-gradient(180deg, rgba(254, 252, 247, 1) 50%, rgba(254, 252, 247, 0));
+     }
+  
+     .nav-bar.active {
+       height: 55vh;
+     }
+  
+     .nav-bar ul {
+       display: block;
+       margin: 2rem auto 0 auto;
+       text-align: center;
+       opacity: 0;
+       background: transparent;
+     }
+  
+     .nav-bar ul li {
+       background: transparent;
+      margin-top: 2rem;
+     }
+  
+     .nav-bar.active ul {
+       opacity: 1;
+     }
+  
+     .nav-bar ul li a {
+       font-family: 'Fraunces 9pt';
+       font-weight: 900;
+       font-size: 1.5rem;
+       line-height: 2rem;
+       color: #333D4B;
+       text-transform: capitalize;
+       background-color: transparent;
+     }
+  
+     .checkbtn {
+       display: block;
+       cursor: pointer;
+     }
+  
+     .checkbtn img {
+      align-self: center; 
+      width: 100%;
+       height: 70%;
+       /* border: 1px solid black; */
+     }
 
   .hero {
     width: 100%;
     margin: 0 auto 8.5rem auto;
+    /* border: 1px solid black; */
+    
   }
 
   .image-container {
-    background-image: url(./assets/home/mobile/image-hero-coffeepress.jpg);
+    background-image: url('./assets/home/mobile/image-hero-coffeepress.jpg');
     width: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 6.25rem 1.5rem 1.5rem 1.5rem;
-    border-radius: 1rem;
+    padding: 6.25rem 1.5rem 6.25rem 1.5rem;
+    border-radius: .6rem;
   }
 
   .coffee-image-text {
     background: transparent;
     width: 90%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: auto;
     text-align: center;
   }
@@ -30,8 +99,8 @@
     font-family: "Fraunces 9pt";
     font-style: normal;
     font-weight: 900;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     color: var(--color-light-cream);
     /* margin: ; */
     width: 100%;
@@ -54,7 +123,7 @@
   }
 
   button {
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     background: var(--color-dark-cyan);
     font-family: "Fraunces 9pt";
     font-style: normal;
@@ -71,19 +140,17 @@
   }
 
   .works-button {
-    margin: 0 0 0 0rem;
-    width: 25%;
-    height: 56px;
+    padding: 1rem 2rem;
   }
 
   .our-collection-container {
-    width: 85%;
+    width: 100%;
     margin: 0 auto 7.5rem auto;
   }
 
   .our-collection {
     width: 100%;
-    margin: auto;
+    margin: 0 auto 0.8rem auto ;
     mix-blend-mode: normal;
     opacity: 0.5;
     background: var(--color-light-cream);
@@ -103,34 +170,46 @@
     margin: 0 auto;
   }
 
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto 7.5rem auto;
-  }
-
   .cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+
+  .card-one,
+  .card-two,
+  .card-three,
+  .card-four{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 100%;
   }
 
   .cards img {
     width: 12.5rem;
     height: 9.4rem;
     margin-bottom: 2rem;
+    /* border: 1px solid black; */
   }
 
   .text-container {
-    margin: auto;
+    margin:0 auto 3rem auto ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    width: 80%;
+  }
+
+  .card-four .text-container{
+  margin-bottom: 0;
   }
 
   .text-container h3 {
@@ -152,8 +231,6 @@
     line-height: 25px;
     text-align: center;
     color: var(--color-grey-dark-blue);
-    width: 17.6rem;
-    height: 6.6rem;
     margin-top: 1rem;
   }
 
@@ -173,6 +250,7 @@
     width: 100%;
     height: 56rem;
     border-radius: 8px;
+    padding: 0;
   }
 
   .choose-card-container-text {
@@ -210,13 +288,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -35rem;
+    /* border: 1px solid black; */
+    margin: -35rem auto 0 auto;
   }
 
   .box {
     display: flex;
     flex-direction: column;
-    width: 89%;
+    width: 100%;
     background: var(--color-dark-cyan);
     border-radius: 8px;
     margin: 0 0 1.5rem 0;
@@ -261,26 +340,32 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    /* width: 21.5rem;
-    height: 3.1rem; */
     text-align: center;
     color: var(--color-light-cream);
   }
 
   .main-container {
     width: 100%;
-    margin: 60rem 0 0 0;
+    /* border: 1px solid black; */
+    margin: 47rem auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-container h4 {
     font-family: "Fraunces 9pt";
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     text-align: center;
     color: var(--color-grey);
     margin-bottom: 5rem;
+  }
+
+  .works-cards-container{
+    margin-bottom: 0;
   }
 
   .works-cards {
@@ -289,7 +374,12 @@
   }
 
   .works-cards-text {
-    margin: 0 0 2.8rem 0;
+    margin:0 auto 3.5rem auto;
+    width: 90%;
+  }
+
+  .works-cards-text:nth-of-type(3){
+margin-bottom: 5rem;
   }
 
   .works-cards-text h1 {
@@ -301,6 +391,7 @@
     text-align: center;
     color: var(--color-pale-orange);
     margin: 0 0 2.3rem 0;
+    width: 100%;
   }
 
   .works-cards-text h2 {
@@ -312,17 +403,17 @@
     text-align: center;
     color: var(--color-grey-dark-blue);
     margin: 0 0 2.6rem 0;
+    width: 100%;
   }
 
   .works-cards-text p {
     font-family: "Barlow";
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: .9rem;
+    line-height: 1.56rem;
     text-align: center;
-    width: 13.9rem;
-    height: 9.6rem;
+    margin: auto;
     color: var(--color-grey-dark-blue);
   }
 
@@ -333,4 +424,73 @@
   .hr-circle{
     display: none;
   }
+
+         footer {
+           /* border: 1px solid black; */
+           margin: 0 auto 4.5rem auto;
+           display: flex;
+           flex-direction: column;
+           text-align: center;
+           justify-content: space-between;
+           background: #2C343E;
+           padding: 3.4rem;
+         }
+    
+         .footer-items {
+           width: 100%;
+           /* border: 1px solid black; */
+         }
+    
+         .footer-image {
+           margin-bottom: 3rem;
+           width: 100%;
+         }
+    
+    
+         .footer-links {
+           /* border: 1px solid black; */
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           /* align-items: center; */
+           color: #83888f;
+           background-color: transparent;
+           margin: 0 auto 3rem auto;
+         }
+    
+         .footer-links a {
+           background-color: transparent;
+           font-family: 'Barlow';
+           font-weight: 700;
+           font-size: 0.75rem;
+           line-height: 0.9rem;
+           text-transform: uppercase;
+           color: #83888F;
+           text-decoration: none;
+           width: 100%;
+           /* border: 1px solid black; */
+         }
+    
+         .footer-links a:nth-of-type(1),
+         .footer-links a:nth-of-type(2) {
+           padding-bottom: 1.5rem;
+          width: 50%;
+         }
+    
+    
+         .social-media {
+           /* border: 1px solid black; */
+           background-color: transparent;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-evenly;
+           align-items: center;
+           margin: 0 auto;
+           width: 60%;
+         }
+    
+         .social-media img {
+           background: transparent;
+         }
+         
 }
