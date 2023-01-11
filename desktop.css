@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap");
-
 :root {
   --color-dark-cyan: #0e8784;
   --color-grey-dark-blue: #333d4b;
@@ -128,14 +126,20 @@ button {
   font-style: normal;
   font-weight: 900;
   font-size: 18px;
-  color: var(--color-light-cream);
   border: none;
   cursor: pointer;
   transition: 0.8s;
 }
 
+button a{
+  color: var(--color-light-cream);
+}
+
 button:hover {
   background: var(--color-light-cream);
+}
+
+button a:hover{
   color: var(--color-dark-cyan);
 }
 
@@ -145,6 +149,10 @@ padding: 1rem 2rem;
 
 .works-button {
   padding: 1rem 2rem;
+}
+
+.works-button a:hover{
+  color: var(--color-dark-cyan);
 }
 
 .our-collection-container {
@@ -447,6 +455,10 @@ footer {
   height: 1.5rem;
 }
 
+.social-media img:hover{
+  cursor: pointer;
+  filter: invert(0.3) sepia(1);
+}
 
 .footer-links {
   /* border: 1px solid black; */
@@ -479,6 +491,10 @@ footer {
   width: 20%;
 }
 
+.footer-links a:hover{
+  color: #fefcf7;
+  cursor: pointer;
+}
 
 
 

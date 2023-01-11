@@ -477,6 +477,10 @@ margin-bottom: 5rem;
           width: 50%;
          }
     
+         .footer-links a:hover{
+          color: #fefcf7;
+          cursor: pointer;
+        }
     
          .social-media {
            /* border: 1px solid black; */
@@ -493,4 +497,8 @@ margin-bottom: 5rem;
            background: transparent;
          }
          
+         .social-media img:hover{
+          cursor: pointer;
+          filter: invert(0.3) sepia(1);
+        }
 }
