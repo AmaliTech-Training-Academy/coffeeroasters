@@ -297,6 +297,11 @@ footer .footer-image #footer-logo{
     margin-right: 2rem;
     }
 
+    .footer-links a:hover{
+        cursor: pointer;
+        color: #fefcf7;
+        }
+
 .social-media {
     width: 15%;
     display: flex;
@@ -313,6 +318,11 @@ footer .footer-image #footer-logo{
     /* border: 1px solid black; */
     margin: 0;
     }
+    
+    .social-media img:hover{
+        cursor: pointer;
+        filter: invert(0.3) sepia(1);
+      }
 
 
 
@@ -893,7 +903,7 @@ header{
         .footer-links a:nth-of-type(2) {
             padding-bottom: 1.5rem;
             }
-            
+
 
         .social-media{
             /* border: 1px solid black; */

@@ -473,6 +473,7 @@ footer .footer-image #footer-logo {
 .footer-links a {
   background: transparent;
   color: #83888f;
+  font-style: normal;
   font-family: "Barlow";
   font-weight: 700;
   font-size: 0.75rem;
@@ -480,6 +481,11 @@ footer .footer-image #footer-logo {
   word-wrap: break-word;
   /* border: 1px solid black; */
   margin-right: 2rem;
+}
+
+.footer-links a:hover{
+  color: #fefcf7;
+  cursor: pointer;
 }
 
 .social-media {
@@ -497,6 +503,11 @@ footer .footer-image #footer-logo {
   width: 15%;
   /* border: 1px solid black; */
   margin: 0;
+}
+
+.social-media img:hover{
+  cursor: pointer;
+  filter: invert(0.3) sepia(1);
 }
 
 .modal {
@@ -1523,6 +1534,7 @@ footer .footer-image #footer-logo {
   .footer-links a:nth-of-type(2) {
     padding-bottom: 1.5rem;
   }
+
 
   .social-media {
     /* border: 1px solid black; */
