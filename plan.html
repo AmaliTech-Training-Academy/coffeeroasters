@@ -96,42 +96,42 @@
       <div class="card-header-image"></div>
     </div>
         <div class="preferences" id="method">
-          <div class="pref-one" id="pref-one">
+          <div class="pref-one child" id="pref-one">
       <h3> Capsule</h3>
       <p>Compatible with Nespresso systems and similar brewers</p>
       </div>
 
-      <div class="pref-two" id="pref-two">
+      <div class="pref-two child" id="pref-two">
       <h3>Filter</h3>
       <p> For pour over or drip methods like Aeropress, Chemex, and V60</p>
       </div>
 
-      <div class="pref-three" id="pref-three">
+      <div class="pref-three child" id="pref-three">
         <h3>Espresso</h3>
           <p>Dense and finely ground beans for an intense, flavorful experience</p>
       </div>
     </div>
        </div>
 
-    <div class="beans-card" data-dropwdown>
+    <div class="beans-card" >
       <div class="card-header">
-        <h1 class="card" data-dropdown-button>What type of coffee?</h1>
+        <h1 class="card">What type of coffee?</h1>
         <div class="card-header-image"></div>
       </div>
-        <div class="preferences" id="beans">
-      <div class="pref-one" id="pref-one">
+        <div class="preferences parent" id="beans">
+      <div class="pref-one child" id="pref-one">
         <h3>Single origin</h3>
       <p>Distinct, high quality coffee from a specific family-owned farm
       </p>
       </div>
 
-      <div class="pref-two" id="pref-two">
+      <div class="pref-two child" id="pref-two">
         <h3>Decaf</h3>
       <p>Just like regular coffee, except the caffeine has been removed
       </p>
     </div>
 
-      <div class="pref-three" id="pref-three">
+      <div class="pref-three child" id="pref-three">
         <h3>Blended</h3>
       <p>Combination of two or three dark roasted beans of organic coffees
       </p>
@@ -145,16 +145,16 @@
   <div class="card-header-image"></div>
   </div>
   <div class="preferences" id="quantity">
-    <div class="pref-one" id="pref-one">
+    <div class="pref-one child" id="pref-one">
       <h3> 250g</h3>
       <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
     </div>
 
-      <div class="pref-two" id="pref-two">
+      <div class="pref-two child" id="pref-two">
         <h3>500g</h3>
       <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
       </div>
-      <div class="pref-three" id="pref-three">
+      <div class="pref-three child" id="pref-three">
         <h3>1000g</h3>
       <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
       </div>
@@ -167,15 +167,15 @@
         <div class="card-header-image"></div>
       </div>
       <div class="preferences" id="grind">
-       <div class="pref-one" id="pref-one">
+       <div class="pref-one child" id="pref-one">
         <h3>Wholebean</h3>
       <p>Best choice if you cherish the full sensory experience</p>
        </div>
-      <div class="pref-two" id="pref-two">
+      <div class="pref-two child" id="pref-two">
         <h3>Filter</h3>
       <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
       </div>
-      <div class="pref-three" id="pref-three">
+      <div class="pref-three child" id="pref-three">
         <h3>Cafetiére</h3>
       <p>Course ground beans specially suited for french press coffee</p>
     </div>
@@ -188,15 +188,15 @@
         <div class="card-header-image"></div>
       </div>
         <div class="preferences" id="delivery">
-          <div class="pref-one" id="pref-one">
+          <div class="pref-one child" id="pref-one">
         <h3>Every week</h3>
       <p>$14.00 per shipment. Includes free first-class shipping.</p>
     </div>
-      <div class="pref-two" id="pref-two">
+      <div class="pref-two child" id="pref-two">
         <h3>Every 2 weeks</h3>
       <p>$17.25 per shipment. Includes free priority shipping.</p>
     </div>
-      <div class="pref-three" id="pref-three">
+      <div class="pref-three child" id="pref-three">
         <h3>Every month</h3>
       <p>$22.50 per shipment. Includes free priority shipping.</p>
     </div>
@@ -218,8 +218,8 @@
   <div class="modal-content">
     <h1>Order Summary</h1>
     <div class="modal-text">
-      <h1>“I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-       sent to me _____.”
+      <h1>“I drink my coffee as <span id="selected-method">_____</span>, with a <span id="selected-bean"> _____</span> type of bean. <span id="selected-quantity">_____</span>ground ala <span id="selected-grind"> _____</span>, 
+        sent to me <span id="selected-delivery">_____</span>.”
      </h1>
       <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
        is off. Subscription discount codes can also be redeemed at the checkout.
@@ -249,58 +249,14 @@
   </div>
   </footer>
 
+  <script src="plan.js" defer></script>
+  <script src="select.js"></script>
   <script>
-  const hamburger = document.querySelector(".checkbtn");
-  hamburger.onclick = function(){
-    const navBar = document.querySelector(".nav-bar");
-    navBar.classList.toggle("active")
-  }
-  
-  const method = document.querySelector(".method-card");
-    const methodHeader = method.querySelector(".card-header");
-    methodHeader.onclick = function(){
-      card = method.querySelector(".preferences");
-      card.classList.toggle("active");
-      imageRotate = method.querySelector(".card-header-image");
-      imageRotate.classList.toggle("active")
+    const modal = document.querySelector(".order-complete");
+    modal.onclick = function(){
+      modDisplay = document.querySelector(".modal");
+      modDisplay.classList.add("active");
     }
-
-    const beans = document.querySelector(".beans-card");
-    const beansHeader = beans.querySelector(".card-header");
-    beansHeader.onclick = function(){
-      card = beans.querySelector(".preferences");
-      card.classList.toggle("active");
-      imageRotate = beans.querySelector(".card-header-image");
-      imageRotate.classList.toggle("active")
-    }
-
-    const quantity = document.querySelector(".quantity-card");
-    const quantityHeader = quantity.querySelector(".card-header");
-    quantityHeader.onclick = function(){
-      card = quantity.querySelector(".preferences");
-      card.classList.toggle("active");
-      imageRotate = quantity.querySelector(".card-header-image");
-      imageRotate.classList.toggle("active")
-    }
-
-    const grind = document.querySelector(".grind-card");
-    const grindHeader = grind.querySelector(".card-header");
-    grindHeader.onclick = function(){
-      card = grind.querySelector(".preferences");
-      card.classList.toggle("active");
-      imageRotate = grind.querySelector(".card-header-image");
-      imageRotate.classList.toggle("active")
-    }
-
-    const delivery = document.querySelector(".delivery-card");
-    const deliveryHeader = delivery.querySelector(".card-header");
-    deliveryHeader.onclick = function(){
-      card = delivery.querySelector(".preferences");
-      card.classList.toggle("active");
-      imageRotate = delivery.querySelector(".card-header-image");
-      imageRotate.classList.toggle("active")
-    }
-    
   </script>
 </body>
 </html>
