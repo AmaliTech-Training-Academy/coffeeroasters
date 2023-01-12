@@ -246,6 +246,10 @@ p {
   line-height: 2rem;
 }
 
+.choices .num.active {
+  color: #0e8784;
+} 
+
 .second-section .choice-cards {
   width: 69%;
   /* border: 1px solid black; */
@@ -479,7 +483,7 @@ footer .footer-image #footer-logo {
   margin-right: 2rem;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
   color: #fefcf7;
   cursor: pointer;
 }
@@ -501,7 +505,7 @@ footer .footer-image #footer-logo {
   margin: 0;
 }
 
-.social-media img:hover{
+.social-media img:hover {
   cursor: pointer;
   filter: invert(0.3) sepia(1);
 }
@@ -535,6 +539,10 @@ footer .footer-image #footer-logo {
   width: 80%;
   margin: auto;
   background: #f4f1eb;
+}
+.modal-text span {
+  color: #0e8784;
+  background: transparent;
 }
 
 .modal-content h1 {
@@ -601,7 +609,7 @@ footer .footer-image #footer-logo {
   background: cyan;
 }
 
-.modal.active{
+.modal.active {
   display: inline;
 }
 
@@ -884,7 +892,6 @@ footer .footer-image #footer-logo {
   .pref-two.active:hover,
   .pref-three.active:hover {
     cursor: pointer;
-    background: green;
     transition: 0.2s ease-in-out;
   }
 
@@ -1027,7 +1034,7 @@ footer .footer-image #footer-logo {
     background-color: rgba(0, 0, 0, 0.4);
     /* border: 1px solid black; */
   }
-  
+
   .modal-content {
     width: 90%;
     /* border: 1px solid black; */
@@ -1037,13 +1044,13 @@ footer .footer-image #footer-logo {
     background: #f4f1eb;
     padding-bottom: 3.5rem;
   }
-  
+
   .modal-text {
     width: 80%;
     margin: auto;
     background: #f4f1eb;
   }
-  
+
   .modal-content h1 {
     border-radius: 0.5rem 0.5rem 0 0;
     padding: 3rem 0 2.5rem 3.5rem;
@@ -1051,7 +1058,7 @@ footer .footer-image #footer-logo {
     color: #f4f1eb;
     margin-bottom: 3.5rem;
   }
-  
+
   .modal-content .modal-text h1 {
     width: 100%;
     margin-bottom: 0.5rem;
@@ -1063,14 +1070,14 @@ footer .footer-image #footer-logo {
     padding: 0;
     background: transparent;
   }
-  
+
   .modal-content .total-amount {
     display: flex;
     /* height: 2.25rem; */
     justify-content: space-between;
     background: transparent;
   }
-  
+
   .modal-content .total-amount h1 {
     background: #f4f1eb;
     font-family: "Fraunces 9pt";
@@ -1082,7 +1089,7 @@ footer .footer-image #footer-logo {
     color: #333d4b;
     margin: 0;
   }
-  
+
   .modal-content p {
     color: #333d4b;
     margin-bottom: 2.9rem;
@@ -1092,7 +1099,7 @@ footer .footer-image #footer-logo {
     line-height: 1.6rem;
     opacity: 0.8;
   }
-  
+
   .modal-content .total-amount button {
     font-family: "Fraunces 9pt";
     font-weight: 900;
@@ -1102,7 +1109,6 @@ footer .footer-image #footer-logo {
     padding: 0.9rem 2rem;
     border: none;
   }
-  
 }
 
 @media screen and (max-width: 440px) {
@@ -1532,7 +1538,6 @@ footer .footer-image #footer-logo {
     padding-bottom: 1.5rem;
   }
 
-
   .social-media {
     /* border: 1px solid black; */
     background-color: transparent;
@@ -1560,7 +1565,7 @@ footer .footer-image #footer-logo {
     background-color: rgba(0, 0, 0, 0.4);
     /* border: 1px solid black; */
   }
-  
+
   .modal-content {
     width: 90%;
     /* border: 1px solid black; */
@@ -1570,21 +1575,21 @@ footer .footer-image #footer-logo {
     background: #f4f1eb;
     padding-bottom: 3.5rem;
   }
-  
+
   .modal-text {
     width: 80%;
     margin: auto;
     background: #f4f1eb;
   }
-  
+
   .modal-content h1 {
     border-radius: 0.5rem 0.5rem 0 0;
-    padding: 1rem 0 1rem .5rem;
+    padding: 1rem 0 1rem 0.5rem;
     background: #2c343e;
     color: #f4f1eb;
     margin-bottom: 3.5rem;
   }
-  
+
   .modal-content .modal-text h1 {
     width: 100%;
     margin-bottom: 0.5rem;
@@ -1596,7 +1601,7 @@ footer .footer-image #footer-logo {
     padding: 0;
     background: transparent;
   }
-  
+
   .modal-content .total-amount {
     display: flex;
     flex-direction: row-reverse;
@@ -1606,7 +1611,7 @@ footer .footer-image #footer-logo {
     border-radius: 0.375rem;
     width: 100%;
   }
-  
+
   .modal-content .total-amount h1 {
     font-family: "Fraunces 9pt";
     font-weight: 900;
@@ -1614,12 +1619,11 @@ footer .footer-image #footer-logo {
     line-height: 1.56rem;
     width: 55%;
     padding: 0;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
     background: #0e8784;
-
   }
-  
+
   .modal-content p {
     margin-bottom: 2.9rem;
     font-family: "Barlow";
@@ -1627,10 +1631,9 @@ footer .footer-image #footer-logo {
     font-size: 1rem;
     line-height: 1.6rem;
     opacity: 0.8;
-    color: #333d4b ;
-
+    color: #333d4b;
   }
-  
+
   .modal-content .total-amount button {
     font-family: "Fraunces 9pt";
     font-weight: 900;
@@ -1639,7 +1642,6 @@ footer .footer-image #footer-logo {
     padding: 0.9rem 1rem;
     border: none;
     background: #0e8784;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-  
 }

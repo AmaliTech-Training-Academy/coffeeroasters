@@ -15,21 +15,25 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   //..................What type of Coffee.....................
-  function selectActiveElement(parentClassName, id) {
-    console.log("inside");
+  function selectActiveElement(parentClassName, className) {
     document.querySelectorAll(`.${parentClassName} .child`).forEach((child) => {
-      console.log(child);
       child.onclick = () => {
-        console.log("onclick  ");
         document
           .querySelectorAll(`.${parentClassName} .child`)
           .forEach((item) => {
             item.classList.remove("active");
           });
+        // document
+        //   .querySelectorAll(`.num`)
+        //   .forEach((item) => {
+        //     item.classList.remove("active");
+        //   });
         // Update order summary
         child.classList.add("active");
-        document.querySelector(`#${id}`).innerHTML =
-          child.children[0].innerHTML;
+        document.querySelector(`[data-choice="${parentClassName}"]`).classList.add('active');
+        document
+          .querySelectorAll(`.${className}`)
+          .forEach((item) => (item.innerHTML = child.children[0].innerHTML));
       };
     });
   }
