@@ -67,26 +67,26 @@
 <section class="second-section">
   <div class="choices">
       <div class="first-choice">
-        <div class="num">01</div>
+        <div class="num" data-choice="method-card">01</div>
           <a href="#">Preferences</a>
-        </div>
+      </div>
       <div class="second-choice">
-        <div class="num">02</div>
+        <div class="num" data-choice="beans-card">02</div>
           <a href="#">Bean type</a>
       </div>
       <div class="third-choice">
-        <div class="num">03</div>
+        <div class="num" data-choice="quantity-card">03</div>
           <a href="#">Quantity</a>
       </div>
       <div class="fourth-choice">
-        <div class="num">04</div>
+        <div class="num" data-choice="grind-card">04</div>
           <a href="#">Grind option</a>
     </div>
       <div class="fifth-choice">
-        <div class="num">05</div>
+        <div class="num" data-choice="delivery-card">05</div>
         <a href="#">Deliveries</a>
       </div>
-      </div>
+    </div>
 
   <div class="choice-cards">
 
@@ -206,8 +206,8 @@
     <div class="order-sum">
       <div class="order-sum-text">
         <h4>Order Summary</h4>
-<h2>“I drink my coffee as <span id="selected-method">_____</span>, with a <span id="selected-bean"> _____</span> type of bean. <span id="selected-quantity">_____</span>ground ala <span id="selected-grind"> _____</span>, 
-  sent to me <span id="selected-delivery">_____</span>.”</h2>
+<h2>“I drink my coffee as <span class="selected-method">_____</span>, with a <span class="selected-bean"> _____</span> type of bean. <span class="selected-quantity">_____</span>ground ala <span class="selected-grind"> _____</span>, 
+  sent to me <span class="selected-delivery">_____</span>.”</h2>
       </div>
   <button class="order-complete">Create my plan!</button> 
     </div>
@@ -218,8 +218,8 @@
   <div class="modal-content">
     <h1>Order Summary</h1>
     <div class="modal-text">
-      <h1>“I drink my coffee as <span id="selected-method">_____</span>, with a <span id="selected-bean"> _____</span> type of bean. <span id="selected-quantity">_____</span>ground ala <span id="selected-grind"> _____</span>, 
-        sent to me <span id="selected-delivery">_____</span>.”
+      <h1>“I drink my coffee as <span class="selected-method">_____</span>, with a <span class="selected-bean"> _____</span> type of bean. <span class="selected-quantity">_____</span>ground ala <span class="selected-grind"> _____</span>, 
+        sent to me <span class="selected-delivery">_____</span>.”
      </h1>
       <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
        is off. Subscription discount codes can also be redeemed at the checkout.
@@ -250,7 +250,7 @@
   </footer>
 
   <script src="plan.js" defer></script>
-  <script src="select.js"></script>
+  <!-- <script src="select.js"></script> -->
   <script>
     const modal = document.querySelector(".order-complete");
     modal.onclick = function(){
