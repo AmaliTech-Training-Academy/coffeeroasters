@@ -198,16 +198,28 @@ p {
 }
 
 .second-section .choices {
+  /* border: 1px solid black; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   height: 20rem;
 }
 
-.second-section .choices {
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: column;
+.second-section .choices a{
+  text-align: left;
+  word-wrap: break-word;
+  font-family: "Fraunces 9pt";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #83888f;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.second-section .choices a:hover{
+  color: #333d4b;
 }
 
 .second-section .choices .first-choice,
@@ -220,23 +232,7 @@ p {
   height: 20%;
 }
 
-.second-section .choices .first-choice a,
-.second-section .choices .second-choice a,
-.second-section .choices .third-choice a,
-.second-section .choices .fourth-choice a,
-.second-section .choices .fifth-choice a {
-  /* border: 1px solid black; */
-  text-align: left;
-  word-wrap: break-word;
-  font-family: "Fraunces 9pt";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: #83888f;
-  padding-top: 1rem;
-  width: 100%;
-}
+
 
 .second-section .choices .num {
   /* margin: .5rem auto; */
@@ -605,11 +601,12 @@ footer .footer-image #footer-logo {
   border-radius: 0.375rem;
   padding: 0.9rem 4rem;
   border: none;
+  background-color: #0e8784;
+  color: #f4f1eb;
 }
 
 .modal-content .total-amount button:hover {
-  background: #0e8784;
-  color: #f4f1eb;
+  background: cyan;
 }
 
 .modal.active {
