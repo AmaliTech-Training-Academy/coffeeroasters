@@ -54,6 +54,12 @@ header {
   margin: 0 1rem;
 }
 
+.nav-bar ul li a:nth-of-type(3) {
+margin-top: 5rem;
+}
+
+.na
+
 .nav-bar ul li a:hover {
   cursor: pointer;
   color: #333d4b;
@@ -424,7 +430,7 @@ p {
 
 .order-complete:hover {
   cursor: pointer;
-  background: cyan;
+  background: #66D2CF;
 }
 
 footer {
@@ -598,7 +604,8 @@ footer .footer-image #footer-logo {
 }
 
 .modal-content .total-amount button:hover {
-  background: cyan;
+  background: #66D2CF;
+  cursor: pointer;
 }
 
 .modal.active{
@@ -1153,7 +1160,7 @@ footer .footer-image #footer-logo {
   }
 
   .nav-bar ul li a {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-family: "Fraunces 9pt";
     font-weight: 900;
     font-size: 1.5rem;
@@ -1161,6 +1168,8 @@ footer .footer-image #footer-logo {
     color: #333d4b;
     text-transform: capitalize;
     background-color: transparent;
+    z-index: 2;
+    position: relative;
   }
 
   .nav-bar ul li a:hover {
