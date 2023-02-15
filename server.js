@@ -49,9 +49,11 @@ app.post("/", (req, res) => {
 app.use("/auth", authRoutes);
 app.use("/bookmark", bookmarkRoutes);
 
+
 mongoose
   .connect(
-    "mongodb+srv://entertainmentDB:entertainmentDB@cluster0.83b8aqh.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://entertainmentDB:entertainmentDB@cluster0.83b8aqh.mongodb.net/entertainmentDB"
+    // "mongodb+srv://entertainmentDB:entertainmentDB@cluster0.83b8aqh.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("Mongodb Database Created");
