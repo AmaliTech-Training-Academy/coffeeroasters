@@ -8,7 +8,6 @@ const LocalStrategy = require("passport-local");
 
 const { getUserByEmail, addUser } = require("../controllers/users");
 
-
 async function verify(email, password, done) {
   // console.log(users);
 
@@ -33,11 +32,11 @@ async function verify(email, password, done) {
 }
 
 passport.serializeUser((user, done) => {
-    done(null, user);
+  done(null, user);
 });
 
 passport.deserializeUser((user, done) => {
-    // delete user.password;
+  // delete user.password;
   return done(null, user);
 });
 
@@ -49,7 +48,6 @@ router.get("/", checkAuthenticated, (req, res, next) => {
   res.status(200).json({ message: "Home Page" });
 });
 
-
 // POST /auth/login
 router.post(
   `/login`,
@@ -60,47 +58,41 @@ router.post(
   }),
   async (req, res) => {
     if (req.user) {
-    //   res.redirect("/");
-        console.log('req.user', req.user);
-        return res.status(201).json({
-             user: { 
-                email: req.user.email ,
-                bookmark: req.user.bookmark
-            } 
-        });
+      //   res.redirect("/");
+      console.log("req.user", req.user);
+      return res.status(201).json({
+        user: {
+          email: req.user.email,
+          bookmark: req.user.bookmark,
+        },
+      });
     }
-    res.status(401).json({ message: "Email or password doesn't match"});
- 
+    res.status(401).json({ message: "Email or password doesn't match" });
   }
 );
 
-
 router.post("/signup", checkNotAuthenticated, async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password } = req.body.data;
   try {
-    // if (password === confirm_password) {
-      console.log("Register");
-      const hashedPassword = await bcrypt.hash(password, 10);
-      console.log(hashedPassword);
+    console.log("Register", password, email);
+    const hashedPassword = await bcrypt.hash(password, 10);
+    console.log(hashedPassword);
 
-      const respond = await addUser(email, hashedPassword);
+    const respond = await addUser(email, hashedPassword);
 
-      console.log("res", respond);
-      res.json("Success");
-   
+    console.log("res", respond);
+    res.json("Success");
   } catch (err) {
     console.log(err);
-    res.status(402).json({ message: "Email already exist" });
+    res.status(409).json({ message: "Email already exist" });
     // res.status(200).json({ message: "signup" });
   }
 });
 
-router.post('/logout', function(req, res, next){
+router.post("/logout", function (req, res, next) {
+  delete req.user;
+  console.log("req.user", req.user);
+  return res.status(200).json("Logout");
+});
 
-    delete req.user
-    console.log('req.user', req.user)
-    return res.status(200).json("Logout");
-
-  });
-  
-  module.exports = router;
+module.exports = router;
