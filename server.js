@@ -10,10 +10,11 @@ const LocalStrategy = require("passport-local");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
+const connect = require('./config/connect')
 const cors = require("cors");
 // const methodOverride = require("method-override");
 // const collection = require("./models/mongodb");
-const PORT = process.env.SERVER_PORT;
+const PORT = process.env.SERVER_PORT || 5000;
 
 app.use(cors());
 const authRoutes = require("./routes/auth");
@@ -48,20 +49,10 @@ app.post("/", (req, res) => {
 
 app.use("/auth", authRoutes);
 app.use("/bookmark", bookmarkRoutes);
+connect()
 
 
-mongoose
-  .connect(
-    "mongodb+srv://entertainmentDB:entertainmentDB@cluster0.83b8aqh.mongodb.net/test"
-    // "mongodb+srv://entertainmentDB:entertainmentDB@cluster0.83b8aqh.mongodb.net/?retryWrites=true&w=majority"
-  )
-  .then(() => {
-    console.log("Mongodb Database Created");
-    mongoose;
-  })
-  .catch((err) => {
-    console.log("Failed to Create Database:", err);
-  });
+
 
 app.listen(PORT, function (err) {
   if (err) console.log("Error in server setup");
